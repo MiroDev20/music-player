@@ -15,7 +15,20 @@ const items = {
     bar     : document.querySelector('[data-progression]'),
     repeat  : document.querySelector('[data-action="repeat"]'),
     back    : document.querySelector('[data-action="previous"]'),
-    play    : document.querySelector('[data-action="play"]'),
+    play    : document.querySelector('[data-action="play"] img'),
     next    : document.querySelector('[data-action="next"]'),
     shuffle : document.querySelector('[data-action="shuffle"]')
 }
+
+items.play.addEventListener(
+    "click", () => {
+        if (items.audio.paused) {
+            items.audio.play();
+            items.play.src="assets/icons/pause.png";
+        }
+        else {
+            items.audio.pause();
+            items.play.src="assets/icons/play.png"; 
+        }
+    }
+);
