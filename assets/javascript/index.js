@@ -20,6 +20,7 @@ const items = {
     shuffle : document.querySelector('[data-action="shuffle"]')
 }
 
+// 🔧 REFACTOR: mantener lógica condicional, pero con operadores ternarios
 items.play.addEventListener(
     "click", () => {
         if (items.audio.paused) {
