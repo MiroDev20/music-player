@@ -6,7 +6,7 @@ export const library = [
         album: 'Ame',
         year: 2026,
         artist: 'ビクター MKII',
-        audioPath : '../audios/everything-is-cold.mpeg'
+        audioPath : './assets/audios/everything-is-cold.mpeg'
     },
     {
         backgroundImage: 'none',
@@ -15,7 +15,7 @@ export const library = [
         album: 'Ame',
         year: 2026,
         artist: 'ビクター MKII',
-        audioPath : '../audios/promise.mpeg'
+        audioPath : './assets/audios/promise.mpeg'
     },
     {
         backgroundImage: 'none',
@@ -24,6 +24,6 @@ export const library = [
         album: 'Ame',
         year: 2026,
         artist: 'ビクター MKII',
-        audioPath : '../audios/saints.mpeg'
+        audioPath : './assets/audios/saints.mpeg'
     }
-]
+];

@@ -1,3 +1,5 @@
+import { library } from "./audio-data.js";
+
 // 🏙️ ARCH: Todos los elementos relacionados están juntos, lo que refleja su relación en la interfaz.
 /**
  * Objeto que contiene referencias a elementos del DOM relacionados con el reproductor de audio.
@@ -11,6 +13,7 @@
  * @property {HTMLElement} shuffle - Botón de mezcla aleatoria, seleccionado por el atributo `[data-action="shuffle"]`.
  */
 const items = {
+    title   : document.querySelector('.main__audio-name'),
     audio   : document.querySelector('[data-audio]'),
     bar     : document.querySelector('[data-progression]'),
     repeat  : document.querySelector('[data-action="repeat"]'),
@@ -30,6 +33,47 @@ items.play.addEventListener(
         else {
             items.audio.pause();
             items.play.src="assets/icons/play.png"; 
+        }
+    }
+);
+
+items.back.addEventListener(
+    "click",
+    () => {
+        for(let i = 0, len = library.length; i < len; i++)
+        {
+            if(items.title.textContent == library[0].title){
+                items.audio.src = library[len - 1].audioPath;
+                items.title.textContent = library[len - 1].title;
+                items.audio.play();
+                break;
+            }
+            if(items.title.textContent == library[i].title){
+                items.audio.src = library[i - 1].audioPath;
+                items.title.textContent = library[i - 1].title;
+                items.audio.play();
+                break;
+            }
+        }
+    }
+);
+
+items.next.addEventListener(
+    "click",
+    () => {
+        for(let i = 0, len = library.length; i < len; i ++){
+            if(items.title.textContent == library[len - 1].title){
+                items.audio.src = library[0].audioPath;
+                items.title = library[0].title;
+                items.audio.play();
+                break;
+            }
+            if(items.title.textContent == library[i].title){
+                items.audio.src = library[i + 1].audioPath;
+                items.title.textContent = library[i + 1].title;
+                items.audio.play();
+                break;
+            }
         }
     }
 );
