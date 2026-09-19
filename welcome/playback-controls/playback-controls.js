@@ -1,21 +1,14 @@
-import { PlayAudio, PauseAudio } from "./audio-player.js"
+import { TogglePlay, ListenPlayback, ListenPause } from "./playback-actions.js";
 
 export const SetUpPlaybackControls = (container) => {
     const playButton = container.querySelector('[data-action="play"]');
-    const playIcon = playButton.querySelector('img')
+    const playIcon = playButton.querySelector('img');
     const audio = container.querySelector('[data-audio]');
 
-    audio.addEventListener('play', () => {
-        playIcon.src = '../assets/icons/pause.png';
-        playIcon.alt = 'Pausar';
-    })
-
-    audio.addEventListener('pause', () => {
-        playIcon.src = '../assets/icons/play.png';
-        playIcon.alt = 'Reproducir';
-    })
+    audio.addEventListener('play', () => ListenPlayback(playIcon));
+    audio.addEventListener('pause', () => ListenPause(playIcon));
 
     playButton.addEventListener('click', () => {
-        audio.paused ? PlayAudio(audio) : PauseAudio(audio);
-    })
+        audio.paused ? TogglePlay(audio) : TogglePlay(audio);
+    });
 }

@@ -1,7 +1,7 @@
 export const PlayAudio = (audio) => {
-    audio.play()
-}
+    audio.play();
+};
 
 export const PauseAudio = (audio) => {
-    audio.pause()
-}
+    audio.pause();
+};
