@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta
@@ -55,7 +55,7 @@
         <button
             type="button"
             class="header__nav-button"
-            aria-label="Abrir navbar"
+            aria-label="Abrir lista de canciones"
             aria-controls="nav"
             aria-expanded="false">
             <span class="material-symbols-rounded">
@@ -83,50 +83,50 @@
             <input
                 data-progress-bar
                 type="range"
-                aria-label="Progreso"
+                aria-label="Progreso de la canción"
                 class="player__progress-bar"
                 step="1"
                 min="0"
                 max="100"
                 value="0"
                 name="progress">
-            <div class="player__duration">
-                <span data-current-time class="player__current-time">0:00</span>
-                <span data-duration class="player__duration">1:00</span>
+            <div class="player__time" aria-label="Tiempo de reproducción">
+                <span data-current-time class="player__current-time" aria-label="Progreso actual">0:00</span>
+                <span data-duration class="player__total-duration" aria-label="Duración de la canción">1:00</span>
             </div>
             <div class="player__volume-control">
-                <button data-volume-btn type="button" class="player__control-button">
+                <button data-volume-btn type="button" class="player__control-button" aria-label="Silenciar audio" aria-hidden="true">
                     <span class="material-symbols-rounded">volume_up</span>
                 </button>
                 <input
                     type="range"
                     name="volume"
-                    aria-label="Volumen"
+                    aria-label="Barra de volumen"
                     min="0"
                     max="100"
                     value="100"
                     class="player__volume">
             </div>
             <div class="player__player-controls">
-                <button data-toggle-repeat type="button" class="player__control-button">
+                <button data-toggle-repeat type="button" class="player__control-button" aria-label="Repetir">
                     <span class="player__repeat-button material-symbols-rounded">repeat</span>
                     <span class="player__repeat-button--active material-symbols-rounded">repeat_one</span>
                 </button>
 
-                <button data-skip-prev type="button" class="player__control-button">
+                <button data-skip-prev type="button" class="player__control-button" aria-label="Reproducir anterior">
                     <span class="material-symbols-rounded">skip_previous</span>
                 </button>
 
-                <button data-play type="button" class="player__control-button">
+                <button data-play type="button" class="player__control-button" aria-label="Reproducir">
                     <span class="player__play-btn material-symbols-rounded">play_arrow</span>
                     <span class="player__play-btn--active material-symbols-rounded">pause</span>
                 </button>
 
-                <button data-skip-next type="button" class="player__control-button">
+                <button data-skip-next type="button" class="player__control-button" aria-label="Reproducir siguiente">
                     <span class="material-symbols-rounded">skip_next</span>
                 </button>
 
-                <button data-shuffle type="button" class="player__control-button">
+                <button data-shuffle type="button" class="player__control-button" aria-label="Reproducir al azár">
                     <span class="material-symbols-rounded">shuffle</span>
                 </button>
             </div>
@@ -137,8 +137,8 @@
                             <img src="assets/images/poster-1.jpg" alt="Happy Moments (Master) Album Poster" class="nav__item" width="800" height="800">
                         </button>
                     </li>
-                    <span class="nav__icon material-symbols-rounded">equalizer</span>
                 </ul>
+                <span class="nav__icon material-symbols-rounded">equalizer</span>
             </nav>
             <div data-overlay data-playlist-toggler class="overlay"></div>
         </section>
