@@ -10,7 +10,6 @@
     <meta
         name="description"
         content="A web music player html template made by codewithsadee">
-
     <title>Music Player</title>
 </head>
 <body>
@@ -18,55 +17,88 @@
         <span class="header__icon material-symbols-rounded">
             graphic_eq
         </span>
-        <span class="header__title">
+        <h1 class="header__title">
             Music Player
-        </span>
-        <span class="header__navbar-button material-symbols-rounded">
-            queue_music
-        </span>
+        </h1>
+        <button
+            type="button"
+            class="header__nav-button"
+            aria-label="Abrir navbar"
+            aria-controls="nav"
+            aria-expanded="false">
+            <span class="material-symbols-rounded">
+                queue_music
+            </span>
+        </button>
     </header>
     <main class="main">
-        <section class="main__player-container">
-            <div class="main__album-container">
+        <section class="player">
+            <figure class="player__album">
                 <img
-                    class="main__album-image"
+                    class="player__album-image"
                     src="#"
                     alt="Happy Moments (Master) Album Poster">
-            </div>
-            <div class="main__track-info">
-                <h2 class="main__track-title">Happy Moments (Master)</h2>
-                <div class="main__album-name-date">
-                    <span class="main__album-name">No Spirit</span>
-                    <span class="main__album-date">2022</span>
+            </figure>
+            <div class="player__track-info">
+                <h2 class="player__track-title">Happy Moments (Master)</h2>
+                <div class="player__album-info">
+                    <span class="player__album-name">No Spirit</span>
+                    <span class="player__album-date">2022</span>
                 </div>
-                <span class="main__artist">No Spirit x Tonion</span>
+                <span class="player__artist">No Spirit x Tonion</span>
             </div>
             <input
                 type="range"
-                class="main__progress-bar"
-                name="progress-bar">
-            <div class="main__player-controls">
-                <span class="material-symbols-rounded">volume_up</span>
+                aria-label="Progreso"
+                class="player__progress-bar"
+                min="0"
+                max="100"
+                value="0"
+                name="progress">
+            <div class="player__player-controls">
+                <button type="button" class="player__control-button">
+                    <span class="material-symbols-rounded">volume_up</span>
+                </button>
 
-                <span class="material-symbols-rounded">repeat</span>
-                <span class="material-symbols-rounded active-icon">repeat_one</span>
+                <button type="button" class="player__control-button">
+                    <span class="material-symbols-rounded">repeat</span>
+                    <span class="material-symbols-rounded">repeat_one</span>
+                </button>
 
-                <span class="material-symbols-rounded">skip_previous</span>
+                <button type="button" class="player__control-button">
+                    <span class="material-symbols-rounded">skip_previous</span>
+                </button>
 
-                <span class="material-symbols-rounded">play_arrow</span>
-                <span class="material-symbols-rounded active-icon">pause</span>
+                <button type="button" class="player__control-button">
+                    <span class="material-symbols-rounded">play_arrow</span>
+                    <span class="material-symbols-rounded active-icon">pause</span>
+                </button>
 
-                <span class="material-symbols-rounded">skip_next</span>
+                <button type="button" class="player__control-button">
+                    <span class="material-symbols-rounded">skip_next</span>
+                </button>
 
-                <span class="material-symbols-rounded">shuffle</span>
+                <button type="button" class="player__control-button">
+                    <span class="material-symbols-rounded">shuffle</span>
+                </button>
             </div>
             <input
                 type="range"
                 name="volume"
-                class="main__volume">
+                aria-label="Volumen"
+                min="0"
+                max="100"
+                value="100"
+                class="player__volume">
         </section>
     </main>
-    <nav class="navbar"></nav>
-    <footer class="footer"></footer>
+    <nav class="nav" id="nav">
+        <li><img src="assets/images/poster-1.jpg" alt="" class="nav__item"></li>
+        <li><img src="assets/images/poster-2.jpg" alt="" class="nav__item"></li>
+        <li><img src="assets/images/poster-3.jpg" alt="" class="nav__item"></li>
+        <li><img src="assets/images/poster-4.jpg" alt="" class="nav__item"></li>
+        <li><img src="assets/images/poster-5.jpg" alt="" class="nav__item"></li>
+    </nav>
+    <footer class="footer">Thanks to CodeWithSadee</footer>
 </body>
 </html>
