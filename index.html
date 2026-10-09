@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="A web music player html template made by codewithsadee">
+
+    <title>Music Player</title>
+</head>
+<body>
+    <header class="header">
+        <span class="header__icon material-symbols-rounded">
+            graphic_eq
+        </span>
+        <span class="header__title">
+            Music Player
+        </span>
+        <span class="header__navbar-button material-symbols-rounded">
+            queue_music
+        </span>
+    </header>
+    <main class="main">
+        <section class="main__player-container">
+            <div class="main__album-container">
+                <img
+                    class="main__album-image"
+                    src="#"
+                    alt="Happy Moments (Master) Album Poster">
+            </div>
+            <div class="main__track-info">
+                <h2 class="main__track-title">Happy Moments (Master)</h2>
+                <div class="main__album-name-date">
+                    <span class="main__album-name">No Spirit</span>
+                    <span class="main__album-date">2022</span>
+                </div>
+                <span class="main__artist">No Spirit x Tonion</span>
+            </div>
+            <input
+                type="range"
+                class="main__progress-bar"
+                name="progress-bar">
+            <div class="main__player-controls">
+                <span class="material-symbols-rounded">volume_up</span>
+
+                <span class="material-symbols-rounded">repeat</span>
+                <span class="material-symbols-rounded active-icon">repeat_one</span>
+
+                <span class="material-symbols-rounded">skip_previous</span>
+
+                <span class="material-symbols-rounded">play_arrow</span>
+                <span class="material-symbols-rounded active-icon">pause</span>
+
+                <span class="material-symbols-rounded">skip_next</span>
+
+                <span class="material-symbols-rounded">shuffle</span>
+            </div>
+            <input
+                type="range"
+                name="volume"
+                class="main__volume">
+        </section>
+    </main>
+    <nav class="navbar"></nav>
+    <footer class="footer"></footer>
+</body>
+</html>
