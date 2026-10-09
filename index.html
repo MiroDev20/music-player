@@ -2,15 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0">
 
+    <!--
+        - primary meta tags
+    -->
+    <title>Music Player</title>
+    <meta
+        name="title"
+        content="Music Player">
     <meta
         name="description"
         content="A web music player html template made by codewithsadee">
-    <title>Music Player</title>
+
+    <!--
+        - favicon
+    -->
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+
+    <!--
+        - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!--
+        - material icon font
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,-25"/>
+
+    <!--
+        - custom css link
+    -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--
+        - custom javascript link
+    -->
+    <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -35,70 +67,82 @@
         <section class="player">
             <figure class="player__album">
                 <img
+                    data-player-album-image
                     class="player__album-image"
-                    src="#"
+                    src="assets/images/poster-1.jpg"
                     alt="Happy Moments (Master) Album Poster">
             </figure>
             <div class="player__track-info">
-                <h2 class="player__track-title">Happy Moments (Master)</h2>
+                <h2 data-track-title class="player__track-title">Happy Moments (Master)</h2>
                 <div class="player__album-info">
-                    <span class="player__album-name">No Spirit</span>
-                    <span class="player__album-date">2022</span>
+                    <span data-album-name class="player__album-name">No Spirit</span>
+                    <span data-album-date class="player__album-date">2022</span>
                 </div>
-                <span class="player__artist">No Spirit x Tonion</span>
+                <span data-artist class="player__artist">No Spirit x Tonion</span>
             </div>
             <input
+                data-progress-bar
                 type="range"
                 aria-label="Progreso"
                 class="player__progress-bar"
+                step="1"
                 min="0"
                 max="100"
                 value="0"
                 name="progress">
-            <div class="player__player-controls">
-                <button type="button" class="player__control-button">
+            <div class="player__duration">
+                <span data-current-time class="player__current-time">0:00</span>
+                <span data-duration class="player__duration">1:00</span>
+            </div>
+            <div class="player__volume-control">
+                <button data-volume-btn type="button" class="player__control-button">
                     <span class="material-symbols-rounded">volume_up</span>
                 </button>
-
-                <button type="button" class="player__control-button">
-                    <span class="material-symbols-rounded">repeat</span>
-                    <span class="material-symbols-rounded">repeat_one</span>
+                <input
+                    type="range"
+                    name="volume"
+                    aria-label="Volumen"
+                    min="0"
+                    max="100"
+                    value="100"
+                    class="player__volume">
+            </div>
+            <div class="player__player-controls">
+                <button data-toggle-repeat type="button" class="player__control-button">
+                    <span class="player__repeat-button material-symbols-rounded">repeat</span>
+                    <span class="player__repeat-button--active material-symbols-rounded">repeat_one</span>
                 </button>
 
-                <button type="button" class="player__control-button">
+                <button data-skip-prev type="button" class="player__control-button">
                     <span class="material-symbols-rounded">skip_previous</span>
                 </button>
 
-                <button type="button" class="player__control-button">
-                    <span class="material-symbols-rounded">play_arrow</span>
-                    <span class="material-symbols-rounded active-icon">pause</span>
+                <button data-play type="button" class="player__control-button">
+                    <span class="player__play-btn material-symbols-rounded">play_arrow</span>
+                    <span class="player__play-btn--active material-symbols-rounded">pause</span>
                 </button>
 
-                <button type="button" class="player__control-button">
+                <button data-skip-next type="button" class="player__control-button">
                     <span class="material-symbols-rounded">skip_next</span>
                 </button>
 
-                <button type="button" class="player__control-button">
+                <button data-shuffle type="button" class="player__control-button">
                     <span class="material-symbols-rounded">shuffle</span>
                 </button>
             </div>
-            <input
-                type="range"
-                name="volume"
-                aria-label="Volumen"
-                min="0"
-                max="100"
-                value="100"
-                class="player__volume">
+            <nav data-playlist class="nav" id="nav">
+                <ul data-music-list class="nav__music-list">
+                    <li>
+                        <button data-playlist-toggler data-playlist-item="1" class="nav__music-item">
+                            <img src="assets/images/poster-1.jpg" alt="Happy Moments (Master) Album Poster" class="nav__item" width="800" height="800">
+                        </button>
+                    </li>
+                    <span class="nav__icon material-symbols-rounded">equalizer</span>
+                </ul>
+            </nav>
+            <div data-overlay data-playlist-toggler class="overlay"></div>
         </section>
     </main>
-    <nav class="nav" id="nav">
-        <li><img src="assets/images/poster-1.jpg" alt="" class="nav__item"></li>
-        <li><img src="assets/images/poster-2.jpg" alt="" class="nav__item"></li>
-        <li><img src="assets/images/poster-3.jpg" alt="" class="nav__item"></li>
-        <li><img src="assets/images/poster-4.jpg" alt="" class="nav__item"></li>
-        <li><img src="assets/images/poster-5.jpg" alt="" class="nav__item"></li>
-    </nav>
     <footer class="footer">Thanks to CodeWithSadee</footer>
 </body>
 </html>
