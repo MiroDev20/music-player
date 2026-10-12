@@ -1,0 +1,10 @@
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player__album-image {
+    width: 280px;
+}
