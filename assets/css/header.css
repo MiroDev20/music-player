@@ -17,13 +17,21 @@
     align-items: center;
 
     gap: 1rem;
-
-    font-size: 1.2rem;
 }
 
-.header__nav-button {
-    display: flex;
-    align-items: center;
+.header__title {
+    font-size: var(--title-lg);
+    font-weight: var(--fw-400);
+}
 
-    color: var(--on-background);
+.header__nav-button span{
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-circle);
+}
+
+.header__nav-button span:hover {
+    background-color: var(--on-surface-variant-hover);
 }
