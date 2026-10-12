@@ -26,9 +26,9 @@ De esta manera, `journal.md` me permitirá:
 
 ---
 
-## 📅 2026-10-9 — ¡Manos a la obra!
+## 📅 2026/10/9 — ¡Manos a la obra!
 
-### 🎯 Estructurar el contenido HTML
+### 🎯 Objetivo de la sesión
 
 **Hoy estructuraré el contenido completo del reproductor para crear una base
 HTML clara, semántica y fácil de mantener.**
@@ -87,20 +87,9 @@ referencia de CodeWithSadee para revisar diferencias y oportunidades de mejora.
 
 ##### Estructurción de `index.html`
 
-<div style="display: flex;">
-    <figure>
-        <img src="./personal/screenshots/html-before-review.png"/>
-        <figcaption  align="center">Antes de la revisión de Codex</figcaption>
-    </figure>
-    <figure>
-        <img src="./personal/screenshots/html-after-review.png"/>
-        <figcaption align="center">Después de la revisión de Codex</figcaption>
-    </figure>
-    <figure>
-        <img src="./personal/screenshots/html-after-comparison.png"/>
-        <figcaption align="center">Después de comparar con Sadee</figcaption>
-    </figure>
-</div>
+|                  Antes de la revisión de Codex                  |                Después de la revisión de Codex                |                     Después de comparar con Sadee                     |
+|:---------------------------------------------------------------:|:-------------------------------------------------------------:|:---------------------------------------------------------------------:|
+| ![before-review](./personal/screenshots/html-before-review.png) | ![after-review](./personal/screenshots/html-after-review.png) | ![after-comparazon](./personal/screenshots/html-after-comparison.png) |
 
 Codex me ayudó a corrigir la semántica y la la comparación con Sadee a organizarlo
 mediante comentarios, importar los recursos externos y separar responsabilidades:
@@ -247,3 +236,31 @@ Le pedí a ChatGPT que me diera una puntuación en diferentes aspectos.
 **Punto de reanudación:** `./assets/css/style.css`
 
 ---
+
+## 📅 26/10/12 — Aplicando estilos CSS
+
+### 🎯 Objetivo de la sesión
+
+**Organizaré los estilos CSS en módulos con responsabilidades claras para que
+sean más fáciles de encontrar, mantener y ampliar.**
+
+A medida que avance, identificaré qué grupos de estilos conviene separar en
+archivos propios. Evitaré dividirlos sin una razón clara y mantendré un archivo
+principal que los importe en el orden adecuado.
+
+**Criterios de éxito:**
+
+- Los estilos están separados en archivos según su responsabilidad.
+- El archivo principal importa los módulos necesarios y la página carga los estilos.
+- La organización permite localizar dónde modificar los estilos de cada sección.
+
+Para evaluar si me siento cómodo navegando entre los módulos y localizando las
+secciones que debo modificar, le pediré a Copilot que me proponga pequeños retos.
+Los resolveré en una rama aparte: cada reto me pedirá hacer cambios concretos y
+yo tendré que encontrar qué módulos y secciones editar, y cuáles dejar intactos.
+
+### 🧭 Plan de trabajo
+
+- [ ] Realizar y revisar las secciones de `style.css` e identificar grupos de estilos relacionados.
+- [ ] Decidir qué grupos necesitan un archivo independiente y crear esos módulos.
+- [ ] Importar los módulos desde la hoja principal en un orden coherente.
