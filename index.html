@@ -82,22 +82,25 @@
                 </div>
                 <span data-artist class="player__artist">No Spirit x Tonion</span>
             </div>
-            <input
-                data-progress-bar
-                type="range"
-                aria-label="Progreso de la canción"
-                class="player__progress-bar"
-                step="1"
-                min="0"
-                max="100"
-                value="0"
-                name="progress">
+            <div class="player__progress-bar-container">
+                <input
+                    data-progress-bar
+                    type="range"
+                    aria-label="Progreso de la canción"
+                    class="player__progress-bar"
+                    step="1"
+                    min="0"
+                    max="100"
+                    value="0"
+                    name="progress">
+                    <div class="player__range-fill"></div>
+            </div>
             <div class="player__time" aria-label="Tiempo de reproducción">
                 <span data-current-time class="player__current-time" aria-label="Progreso actual">0:00</span>
                 <span data-duration class="player__total-duration" aria-label="Duración de la canción">1:00</span>
             </div>
             <div class="player__volume-control">
-                <button data-volume-btn type="button" class="player__control-button" aria-label="Silenciar audio" aria-hidden="true">
+                <button data-volume-btn type="button" class="player__control-button volume  " aria-label="Silenciar audio" aria-hidden="true">
                     <span class="material-symbols-rounded">volume_up</span>
                 </button>
                 <input
@@ -111,40 +114,52 @@
             </div>
             <div class="player__player-controls">
                 <button data-toggle-repeat type="button" class="player__control-button" aria-label="Repetir">
-                    <span class="player__repeat-button material-symbols-rounded">repeat</span>
-                    <span class="player__repeat-button--active material-symbols-rounded">repeat_one</span>
+                    <span class="player__repeat-button material-symbols-rounded icon">repeat</span>
+                    <span class="player__repeat-button--active material-symbols-rounded icon">repeat_one</span>
                 </button>
 
                 <button data-skip-prev type="button" class="player__control-button" aria-label="Reproducir anterior">
-                    <span class="material-symbols-rounded">skip_previous</span>
+                    <span class="material-symbols-rounded icon">skip_previous</span>
                 </button>
 
                 <button data-play type="button" class="player__control-button" aria-label="Reproducir">
-                    <span class="player__play-btn material-symbols-rounded">play_arrow</span>
-                    <span class="player__play-btn--active material-symbols-rounded">pause</span>
+                    <span class="player__play-btn material-symbols-rounded icon">play_arrow</span>
+                    <span class="player__play-btn--active material-symbols-rounded icon">pause</span>
                 </button>
 
                 <button data-skip-next type="button" class="player__control-button" aria-label="Reproducir siguiente">
-                    <span class="material-symbols-rounded">skip_next</span>
+                    <span class="material-symbols-rounded icon">skip_next</span>
                 </button>
 
                 <button data-shuffle type="button" class="player__control-button" aria-label="Reproducir al azár">
-                    <span class="material-symbols-rounded">shuffle</span>
+                    <span class="material-symbols-rounded icon">shuffle</span>
                 </button>
             </div>
-            <nav data-playlist class="nav" id="nav">
+            <nav data-playlist class="nav nav--active" id="nav">
                 <ul data-music-list class="nav__music-list">
+                    <li>
+                        <button data-playlist-toggler data-playlist-item="1" class="nav__music-item nav__music-item--active">
+                            <img src="assets/images/poster-1.jpg" alt="Happy Moments (Master) Album Poster" class="nav__item" width="800" height="800">
+                        </button>
+                        <span class="nav__icon material-symbols-rounded">equalizer</span>
+                    </li>
                     <li>
                         <button data-playlist-toggler data-playlist-item="1" class="nav__music-item">
                             <img src="assets/images/poster-1.jpg" alt="Happy Moments (Master) Album Poster" class="nav__item" width="800" height="800">
                         </button>
+                        <span class="nav__icon material-symbols-rounded">equalizer</span>
+                    </li>
+                    <li>
+                        <button data-playlist-toggler data-playlist-item="1" class="nav__music-item">
+                            <img src="assets/images/poster-1.jpg" alt="Happy Moments (Master) Album Poster" class="nav__item" width="800" height="800">
+                        </button>
+                        <span class="nav__icon material-symbols-rounded">equalizer</span>
                     </li>
                 </ul>
-                <span class="nav__icon material-symbols-rounded">equalizer</span>
             </nav>
-            <div data-overlay data-playlist-toggler class="overlay"></div>
+            <div data-overlay data-playlist-toggler class="overlay overlay--active"></div>
         </section>
     </main>
-    <footer class="footer">Thanks to CodeWithSadee</footer>
+    <!-- <footer class="footer">Thanks to CodeWithSadee</footer> -->
 </body>
 </html>
