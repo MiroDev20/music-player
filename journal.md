@@ -261,6 +261,26 @@ yo tendré que encontrar qué módulos y secciones editar, y cuáles dejar intac
 
 ### 🧭 Plan de trabajo
 
-- [ ] Realizar y revisar las secciones de `style.css` e identificar grupos de estilos relacionados.
+- [ ] Realizar y revisar las secciones de `style.css` e identificar grupos de estilos
+    relacionados.
 - [ ] Decidir qué grupos necesitan un archivo independiente y crear esos módulos.
 - [ ] Importar los módulos desde la hoja principal en un orden coherente.
+
+#### Evidencia del progreso
+
+Exceptuando `resets.css` y `propertys.css` estoy realizando los estilos del header
+basándome exposición de Sadee al inicio del vídeo y después al compararlo agrego
+cosas o refactorizo lo que ya hay debido a que él lo hace mejor.
+
+| Miro | Sadee |
+|------|-------|
+| ![header](./personal/screenshots/miro-header.png) | ![header](./personal/screenshots/sadee-header.png) |
+
+Los resultados son similares, eso es lo que importa.
+
+---
+
+Cuando empecé el proyecto creí que el haría primero toda la estructura HTML y después
+los estilos CSS, ahora veo que está alternando entre ambos. Creo que es buena idea
+porque vas viendo los resultados de tu proyecto y evitas pasar tanto tiempo en una
+sola cosa.
